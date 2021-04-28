@@ -6,6 +6,10 @@ class UnsplashApi {
             baseURL: this.baseURL,
             headers : {
                 Authorization: this.clientID
+            },
+            params :{
+                query : 'animal',
+                count: 1
             }
         });
     }
@@ -13,7 +17,7 @@ class UnsplashApi {
     async randomPhotoBring(){
         try {
             const photoResponse = await this.axiosObject.get('/photos/random');
-        console.log(photoResponse.data.urls.regular);
+        console.log(photoResponse.data[0].urls.regular);
         //return photoResponse.data.value;
         } catch (err) {
             console.log(err);
