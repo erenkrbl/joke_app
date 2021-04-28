@@ -7,9 +7,14 @@ class JokeApi {
     }
 
     async randomJokeBring(){
-        const jokeResponse = await this.axiosObject.get('/jokes/random');
+        try {
+            const jokeResponse = await this.axiosObject.get('/jokes/random');
         console.log(jokeResponse.data.value);
         return jokeResponse.data.value;
 
+        } catch (error) {
+            console.log(error);
+        }
     }
 }
+
