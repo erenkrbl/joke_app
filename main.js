@@ -1,11 +1,13 @@
-const joke = new JokeApi;
+// const joke = new JokeApi;
 
-joke.randomJokeBring();
+// joke.randomJokeBring();
 
-const photo = new UnsplashApi();
+// const photo = new UnsplashApi();
 
-photo.randomPhotoBring();
+// photo.randomPhotoBring();
 
-const translate = new TranslateApi("How are you today");
+// const translate = new TranslateApi("How are you today");
 
-translate.translatedDid();
+// translate.translatedDid();
+
+const screen = new Screen();
