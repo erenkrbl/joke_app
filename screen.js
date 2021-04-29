@@ -5,6 +5,8 @@ class Screen {
     }
 
     async jokeBring(){
-        console.log('click');
+        const randomPhoto = await new UnsplashApi().randomPhotoBring();
+        const randomJoke = await new JokeApi().randomJokeBring();
+        const translate = await new TranslateApi(randomJoke).translatedDid();
     }
 }
