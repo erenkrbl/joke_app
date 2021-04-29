@@ -18,3 +18,6 @@ class JokeApi {
     }
 }
 
+
+// export API_KEY=AIzaSyAw0tZD1IjVJ2EWl2h3mIU60Wi-8qExVSY
+
