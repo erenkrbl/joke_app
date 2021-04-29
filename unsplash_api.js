@@ -18,9 +18,10 @@ class UnsplashApi {
         try {
             const photoResponse = await this.axiosObject.get('/photos/random');
         console.log(photoResponse.data[0].urls.regular);
-        //return photoResponse.data.value;
+        return photoResponse.data[0].urls.regular;
         } catch (err) {
-            console.log(err);
+            console.log(err.response);
+            return 'https://bulma.io/images/placeholders/1280x960.png';
         }
 
     }
